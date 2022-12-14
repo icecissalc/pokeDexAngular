@@ -20,6 +20,14 @@
     padding: 10px;
 }
 
+.innerCardTypes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
 .innerCardDetail {
     display: flex;
     align-items: center;
@@ -27,3 +35,26 @@
     justify-content: center;
     padding: 10px;
 }
+
+/* 
+    Types x Colors:
+    Bug
+    Dark
+    Dragon
+    Electric
+    Fairy
+    Fighting
+    Fire
+    Flying
+    Ghost
+    Grass
+    Ground
+    Ice
+    Normal
+    Poison
+    Psychic
+    Rock
+    Steel
+    Water
+
+*/

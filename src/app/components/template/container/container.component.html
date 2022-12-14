@@ -4,13 +4,16 @@
             <div class="innerCard">
                 <img src={{item.sprites.front_default}} width="100px" height="100px">
                 <label  id="lblName">#{{item.id}} - {{item.name}}</label>
+                <button (click)="onClickDetalha()">Detalhar</button>
             </div>
-            <div class="innerCardDetail" *ngFor="let type of item.types" >
-                <label id="lblType">{{type.type.name}}</label>
+            <div class="innerCardDetail" *ngIf="detailShow">
+                <div class="innerCardTypes"  *ngFor="let type of item.types"  >
+                    <label id="lblType">{{type.type.name}}</label>
+                </div>
             </div>
         </div>
     </div>
-    <div >
+    <div>
         <button (click)="onClickButtonPrevious()" [disabled]="previousDisabled">Previous</button>
         <button (click)="onClickButtonNext()" [disabled]="nextDisabled">Next</button>
     </div>

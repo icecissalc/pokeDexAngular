@@ -22,7 +22,7 @@ export class ContainerComponent {
   lastPageNumber: number = 999;
   countAmount: number = 0;
   nextDisabled: boolean = false;
-  detailHidden: boolean = true;
+  detailShow: boolean = false;
 
   constructor(
     private pokemonService: PokemonService,
@@ -90,10 +90,8 @@ export class ContainerComponent {
     this.pokemon = []
     this.pokemonService.readByPage(this.pokemonAmount.next).subscribe(pokemonAmount => {
       this.pokemonAmount = pokemonAmount
-      console.log('antes if next null this page: ', this.pageNumber)
       if(pokemonAmount.next === null){
         this.pageNumber = this.lastPageNumber
-        console.log('next null this page: ', this.pageNumber)
       }
       this.pkmResult = this.pokemonAmount.results
       this.pokemonAmount.results.forEach(obj => {
@@ -110,6 +108,14 @@ export class ContainerComponent {
     }
     if(this.pageNumber === this.lastPageNumber){
       this.nextDisabled = true
+    }
+  }
+
+  onClickDetalha(){
+    if(this.detailShow){
+      this.detailShow = false;
+    }else{
+      this.detailShow = true;
     }
   }
 
