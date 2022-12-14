@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: solid 1px;
+    margin: 10px 10px;
+}
+
+.innerCard {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.innerCardDetail {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}

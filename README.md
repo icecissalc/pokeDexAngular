@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+Links Referencia:
+https://stackoverflow.com/questions/41590253/angular2-template-how-to-wrap-contents-of-ngfor-with-div
+https://stackoverflow.com/questions/53003483/why-no-angular-cli-generate-command-for-model-in-angular-project
+

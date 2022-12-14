@@ -1,0 +1,17 @@
+<div class="container">
+    <div *ngFor="let item of getPokemon()">
+        <div class="card">
+            <div class="innerCard">
+                <img src={{item.sprites.front_default}} width="100px" height="100px">
+                <label  id="lblName">#{{item.id}} - {{item.name}}</label>
+            </div>
+            <div class="innerCardDetail" *ngFor="let type of item.types" >
+                <label id="lblType">{{type.type.name}}</label>
+            </div>
+        </div>
+    </div>
+    <div >
+        <button (click)="onClickButtonPrevious()" [disabled]="previousDisabled">Previous</button>
+        <button (click)="onClickButtonNext()" [disabled]="nextDisabled">Next</button>
+    </div>
+</div>
